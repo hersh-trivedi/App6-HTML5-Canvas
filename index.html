@@ -48,13 +48,13 @@ function writeName() {
 	var blankCanvas = document.getElementById("myCanvas"); //retrieves "myCanvas" from HTML
 	var ctx = blankCanvas.getContext("2d");
 	ctx.font = "12px Arial";
-	ctx.fillText("Hersh Trivedi", 400, 200)
+	ctx.fillText("Hersh Trivedi", 100, 100)
 }
 function image() {
 	var blankCanvas = document.getElementById("myCanvas"); //retrieves "myCanvas" from HTML
 	var ctx = blankCanvas.getContext("2d");
 	var img = document.getElementById("diy");
-	ctx.drawImage(img, 100, 100)
+	ctx.drawImage(img, 50, 50)
 //function clear() {
 </script>
 
@@ -88,11 +88,15 @@ function image() {
 <div id="content" class="w3-container">
 	
 	<!-- text below creates the canvas -->
-	<canvas id="myCanvas" width="500" height="250" style="border:1px solid #000000;"></canvas>
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
 	
 	<p><button> onclick="drawRect();">Draw a rectangle!</button></p>
 	
+	<p><button> onclick="writeName();">Write my name!</button></p>
+	
 	<img id = "diy" src="https://bit.ly/3vlHbui" alt="diagnostics" width="50" height="50">
+	
+	<p><button> onclick="image();">Print out an image!</button></p>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	

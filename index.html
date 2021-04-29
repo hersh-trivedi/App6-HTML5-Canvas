@@ -42,8 +42,20 @@ function drawRect() {
 	var blankCanvas = document.getElementById("myCanvas"); //retrieves "myCanvas" from HTML
 	var ctx = blankCanvas.getContext("2d");
 	ctx.fillStyle = 'black';
-	ctx.fillRect(10, 10, 50, 25)
+	ctx.fillRect(10, 10, 50, 25);
 }
+function writeName() {
+	var blankCanvas = document.getElementById("myCanvas"); //retrieves "myCanvas" from HTML
+	var ctx = blankCanvas.getContext("2d");
+	ctx.font = "12px Arial";
+	ctx.fillText("Hersh Trivedi", 400, 200)
+}
+function image() {
+	var blankCanvas = document.getElementById("myCanvas"); //retrieves "myCanvas" from HTML
+	var ctx = blankCanvas.getContext("2d");
+	var img = document.getElementById("diy");
+	ctx.drawImage(img, 100, 100)
+//function clear() {
 </script>
 
 
@@ -78,7 +90,9 @@ function drawRect() {
 	<!-- text below creates the canvas -->
 	<canvas id="myCanvas" width="500" height="250" style="border:1px solid #000000;"></canvas>
 	
-	<a onclick="drawRect();">Draw a rectangle!</a>
+	<p><button> onclick="drawRect();">Draw a rectangle!</button></p>
+	
+	<img id = "diy" src="https://bit.ly/3vlHbui" alt="diagnostics" width="50" height="50">
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	

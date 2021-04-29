@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+Creates a blank canvas and four buttons with varying functions involving the canvas
  
 Known Issues:
-blah, blah, blah, blah
+Trouble formatting the image on the canvas
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -38,27 +38,38 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+//function to display a rectangle on canvas
 function drawRect() {
 	var blankCanvas = document.getElementById("myCanvas"); //retrieves "myCanvas" from HTML
 	var ctx = blankCanvas.getContext("2d");
+	//colors rectangle black
 	ctx.fillStyle = 'black';
+	//prints rectangle at (10, 10) with dimensions 100x50
 	ctx.fillRect(10, 10, 100, 50);
 }
+//function to write my name on canvas
 function writeName() {
 	var blankCanvas = document.getElementById("myCanvas"); //retrieves "myCanvas" from HTML
 	var ctx = blankCanvas.getContext("2d");
+	//changes font size and style
 	ctx.font = "12px Arial";
+	//prints my name at (100, 100)
 	ctx.fillText("Hersh Trivedi", 100, 100);
 }
+//function to display an image on canvas
 function image() {
 	var blankCanvas = document.getElementById("myCanvas"); //retrieves "myCanvas" from HTML
 	var ctx = blankCanvas.getContext("2d");
+	//retrieves image
 	var img = document.getElementById("diy");
+	//displays image at (200, 200)
 	ctx.drawImage(img, 200, 200);
 }
+//function to clear canvas
 function clear() {
 	var blankCanvas = document.getElementById("myCanvas"); //retrieves "myCanvas" from HTML
 	var ctx = blankCanvas.getContext("2d");
+	//clears canvas
 	ctx.clearRect(0, 0, blankCanvas.width, blankCanvas.height);
 }
 </script>
@@ -91,17 +102,22 @@ function clear() {
 </div>
 	
 <div id="content" class="w3-container">
+	<!-- inputs image -->
 	<img id = "diy" src="diy.jpeg" alt="diagnostics" width="50" height="50">
 	
 	<!-- text below creates the canvas -->
 	<canvas id="myCanvas" width="500" height="250" style="border:1px solid #000000;"></canvas>
 	
+	<!-- creates and formats button to draw rectangle -->
 	<p><button onclick="drawRect();" class="w3-btn w3-black">Draw a rectangle!</button></p>
 	
+	<!-- creates and formats button to write name -->
 	<p><button onclick="writeName();" class="w3-btn w3-black">Write my name!</button></p>
 	
+	<!-- creates and formats button to display image -->
 	<p><button onclick="image();" class="w3-btn w3-black">Print an image!</button></p>
 	
+	<!-- creates and formats button to clear the canvas -->
 	<p><button onclick="clear();" class="w3-btn w3-black">Clear canvas!</button></p>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>

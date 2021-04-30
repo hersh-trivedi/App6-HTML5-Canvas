@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 Creates a blank canvas and four buttons with varying functions involving the canvas
  
 Known Issues:
-Trouble formatting the image on the canvas
+Trouble formatting the image on the canvas, clear function does not work
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -52,7 +52,7 @@ function writeName() {
 	var blankCanvas = document.getElementById("myCanvas"); //retrieves "myCanvas" from HTML
 	var ctx = blankCanvas.getContext("2d");
 	//changes font size and style
-	ctx.font = "12px Arial";
+	ctx.font = "35px Arial";
 	//prints my name at (100, 100)
 	ctx.fillText("Hersh Trivedi", 100, 100);
 }

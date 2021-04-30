@@ -64,7 +64,7 @@ function image() {
 	var img = new Image();
 	img.src = 'diy.jpeg'
 	//displays image at (200, 200)
-	ctx.drawImage(img, 250, 250);
+	ctx.drawImage(img, 250, 100);
 }
 //function to clear canvas
 function clear() {
@@ -105,7 +105,7 @@ function clear() {
 <div id="content" class="w3-container">
 
 	<!-- text below creates the canvas -->
-	<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+	<canvas id="myCanvas" width="500" height="250" style="border:1px solid #000000;"></canvas>
 	
 	<!-- creates and formats button to draw rectangle -->
 	<p><button onclick="drawRect();" class="w3-btn w3-black">Draw a rectangle!</button></p>
